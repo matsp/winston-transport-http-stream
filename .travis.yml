@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - node
   - lts/*
-before_install: -
+before_install:
   - export PATH=$PATH:`yarn global bin`
   - yarn global add greenkeeper-lockfile@1
 install: yarn
