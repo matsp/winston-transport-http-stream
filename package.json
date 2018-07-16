@@ -1,6 +1,6 @@
 {
   "name": "winston-transport-http-stream",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "custom winston transport to stream logs to http endpoint",
   "main": "index.js",
   "repository": "https://github.com/matsp/winston-transport-http-stream",
@@ -38,7 +38,9 @@
     "extends": [
       "standard"
     ],
-    "plugins": ["jest"],
+    "plugins": [
+      "jest"
+    ],
     "env": {
       "node": true,
       "es6": true,
