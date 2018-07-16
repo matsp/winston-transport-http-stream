@@ -21,4 +21,27 @@ yarn add winston-transport-http-stream
 
 ## Usage
 
-TODO
+### Example
+
+The `options` object is directly passed to node's http library but you can add also the `url` property that
+will be parsed and automatically set the relevant options for http.
+You can see all options in the official docs [here](https://nodejs.org/api/http.html#http_http_request_options_callback).
+
+```javascript
+const winston = require('winston')
+const HttpStreamTransport = require('winston-transport-http-stream')
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.json(),
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' }),
+    new HttpStreamTransport({
+      url: 'https://yourdomain.com/log'
+    })
+  ]
+})
+
+logger.info('hello')
+```
