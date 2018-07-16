@@ -25,6 +25,7 @@ module.exports = class HttpStreamTransport extends Transport {
     this.options.path = parsedURL.pathname
     this.options.protocol = parsedURL.protocol
     this.options.method = 'POST'
+    if (typeof parsedURL.port !== 'undefined') this.options.port = parsedURL.port
   }
 
   log (info, callback) {
