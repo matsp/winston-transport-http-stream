@@ -7,6 +7,8 @@
 [![Build Status](https://travis-ci.org/matsp/winston-transport-http-stream.svg?branch=master)](https://travis-ci.org/matsp/winston-transport-http-stream) 
 [![Greenkeeper badge](https://badges.greenkeeper.io/matsp/winston-transport-http-stream.svg)](https://greenkeeper.io/)
 
+This library will push your Winston logger information to an external http endpoint e.g. central log collection. When the request fails the logging request won't be send again.
+
 ## Installation
 
 ```bash
@@ -23,7 +25,7 @@ yarn add winston-transport-http-stream
 
 ### Example
 
-The `options` object is directly passed to node's http library but you can add also the `url` property that
+The `options` parameter object is directly passed to node's http library but you can add also the `url` property that
 will be parsed and automatically set the relevant options for http.
 You can see all options in the official docs [here](https://nodejs.org/api/http.html#http_http_request_options_callback).
 
