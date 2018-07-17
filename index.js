@@ -18,6 +18,9 @@ const postData = (options, data) => {
 module.exports = class HttpStreamTransport extends Transport {
   constructor (options = {}) {
     super(options)
+    const headers = {
+      'Content-Type': 'application/json'
+    }
     this.options = options
     if (!options.url) throw new Error('HttpStreamTransport: Missing URL')
     const parsedURL = URL.parse(options.url)
@@ -26,6 +29,7 @@ module.exports = class HttpStreamTransport extends Transport {
     this.options.protocol = parsedURL.protocol
     this.options.method = 'POST'
     if (typeof parsedURL.port !== 'undefined') this.options.port = parsedURL.port
+    this.options.headers = typeof this.options.headers !== 'undefined' ? {...this.options.headers, ...headers} : headers
   }
 
   log (info, callback) {
