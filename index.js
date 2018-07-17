@@ -29,7 +29,7 @@ module.exports = class HttpStreamTransport extends Transport {
     this.options.protocol = parsedURL.protocol
     this.options.method = 'POST'
     if (typeof parsedURL.port !== 'undefined') this.options.port = parsedURL.port
-    this.options.headers = typeof this.options.headers !== 'undefined' ? {...this.options.headers, ...headers} : headers
+    this.options.headers = typeof this.options.headers !== 'undefined' ? {...headers, ...this.options.headers} : headers
   }
 
   log (info, callback) {
