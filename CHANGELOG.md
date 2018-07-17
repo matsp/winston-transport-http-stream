@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/matsp/winston-transport-http-stream/compare/v0.1.0...v0.1.1) (2018-07-17)
+
+
+### Bug Fixes
+
+* Set content-type in the headers ([6c37d82](https://github.com/matsp/winston-transport-http-stream/commit/6c37d82))
+* Use json as default content-type ([e23d3e1](https://github.com/matsp/winston-transport-http-stream/commit/e23d3e1))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/matsp/winston-transport-http-stream/compare/v0.0.1...v0.1.0) (2018-07-16)
 
