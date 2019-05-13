@@ -4,8 +4,7 @@
 [![npm](https://img.shields.io/npm/dt/winston-transport-http-stream.svg)](https://www.npmjs.com/package/winston-transport-http-stream)
 
 [![npm version](https://badge.fury.io/js/winston-transport-http-stream.svg)](https://badge.fury.io/js/winston-transport-http-stream)
-[![Build Status](https://travis-ci.org/matsp/winston-transport-http-stream.svg?branch=master)](https://travis-ci.org/matsp/winston-transport-http-stream) 
-[![Greenkeeper badge](https://badges.greenkeeper.io/matsp/winston-transport-http-stream.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/matsp/winston-transport-http-stream.svg?branch=master)](https://travis-ci.org/matsp/winston-transport-http-stream)
 
 This library will push your Winston logger information to an external http endpoint e.g. central log collection. When the request fails the logging request won't be send again.
 
